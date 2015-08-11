@@ -15,6 +15,14 @@ L.Layer = L.Evented.extend({
 		return this.removeFrom(this._map || this._mapToAdd);
 	},
 
+	setName: function (name) {
+		this.name = name;
+	},
+
+	getName: function () {
+		return this.name;
+	},
+
 	removeFrom: function (obj) {
 		if (obj) {
 			obj.removeLayer(this);
